@@ -1,30 +1,61 @@
 # Core Paper Review
 
-一个以核心贡献和原文证据为依据的论文审稿 skill。先检查整体完成度，再形成克制、具体且可回应的审稿意见。
+📝 A skill for preliminary, reviewer-supervised assessment of research papers.
 
-## 工作流程
+This workflow helps reviewers organize a first-pass assessment, identify a small number of decision-relevant questions, and check those questions against the paper and its supplementary material. Its purpose is to make a reviewer's work easier to inspect and refine. It does not replace reading the paper, understanding the research, or making an independent judgment.
 
-1. 审稿前确认会议、年份、track，以及用户指定或当年官方审稿模板。
-2. 检查正文内容密度、实验前说明性图示、实验对主要主张的覆盖和内容一致性。
-3. 聚焦真正影响核心贡献的问题，核对主文、补充材料和作者已有解释。
-4. 默认使用五分制工作评分；会议系统的评分含义另行核实。
-5. 生成中文 Markdown、英文 Markdown、英文 LaTeX 和原文证据核对文件，并检查一致性。
+## Intended use
 
-明显敷衍且缺少核心证据的稿件初始评分为 1–2 分；初筛通过不保证高分。篇幅、图片数量和 AI 感是核查线索，不能单独成为扣分理由。
+AI assistance in reviewing deserves scrutiny, not celebration for its own sake. This repository makes one such workflow explicit so its assumptions and limitations can be examined. Its availability is not an endorsement of unrestricted AI use in peer review.
 
-## 使用
+**The skill supports preliminary review work. It is not a one-step generator of a final review or an automated acceptance decision.** Any generated assessment, criticism, question, or score is provisional. A reviewer must decide which points are correct, relevant, proportionate, and worth including in their own review.
 
-将本目录放入所用工具支持的技能目录，然后使用：
+The responsibility for a submitted review remains with the reviewer. A well-formatted draft, a bilingual version, or a LaTeX document does not make an assessment reliable or ready to submit.
 
-> 请使用 $core-paper-review 审阅这篇论文，先确认会议模板并检查整体完成度，再聚焦核心问题。
+## A reviewer-led workflow
 
-完整说明见 [SKILL.md](SKILL.md)。
+1. **Confirm the rules.** Identify the conference, year, track, review form, confidentiality requirements, and policy on AI assistance before using the workflow with a submission.
+2. **Read and form your own assessment.** Follow any requirement to write an original human assessment before interacting with an AI tool. Do not ask the tool to manufacture that assessment retrospectively.
+3. **Use the skill for preliminary assistance.** Inspect the paper's completeness, organize its main claims and evidence, and identify questions that could materially change the assessment.
+4. **Check the proposed points yourself.** Read the cited passages, figures, tables, and supplementary material. Remove resolved, speculative, duplicated, or peripheral criticisms. Correct claims that exceed the evidence.
+5. **Prepare your own review.** Select and revise the points you can personally defend. The skill can then help organize the confirmed points into the required fields, translate them, and prepare a LaTeX version where useful.
 
-## 文件
+Do not submit a generated draft unchanged simply because it sounds convincing. Do not retain a criticism you cannot explain or support from the available evidence.
 
-- [整体完成度初筛](references/quality-screening.md)
-- [通用尺度与虚构示例](references/calibration.md)
-- [输出与原文核对约定](references/output-contract.md)
-- [英文 LaTeX 排版骨架](assets/review-english.tex)
+## What the skill helps with
 
-正式分配审稿应遵循当年会议的 AI 使用政策和披露要求。校准示例为虚构通用场景，不包含真实论文、个人审稿记录或原始材料。
+- Checking substantive completeness, including content density, explanatory figures, and whether experiments or arguments address the central claims.
+- Focusing on core issues rather than producing long lists of minor complaints.
+- Distinguishing technical errors, missing evidence, limitations of scope, and optional improvements.
+- Locating supporting passages and recording the limits of what they establish.
+- Preparing Chinese and English working drafts, an English LaTeX version, and an evidence-checking document.
+- Keeping terminology, numbers, questions, and provisional recommendations consistent across those documents.
+
+The working score defaults to a five-point scale. Conference-specific score meanings must be checked separately. Initial scores of 1–2 are reserved for substantiated serious deficiencies; passing the completeness check does not guarantee a higher score.
+
+Page usage, figure counts, and an impression of "AI-like" writing are prompts for closer reading. They are not independent reasons to reject a paper. A concise paper may be complete, a polished paper may be weak, and AI-assisted writing does not by itself establish poor research quality.
+
+## Limits, confidentiality, and disclosure
+
+AI tools can produce plausible but unsupported criticisms, miss important evidence, misunderstand experiments or proofs, and invent references or details. Repetition or confident wording does not increase the reliability of a claim. The evidence-checking document is an aid to verification, not a certificate of correctness.
+
+Use the workflow only within the applicable venue's rules. Do not share confidential submissions, code, supplementary material, or review discussions with a tool or service unless that use is permitted. If a venue prohibits the proposed assistance, do not use this skill for that assistance.
+
+Where disclosure is required, report the assistance accurately and retain the original human assessment and interaction records required by the venue. Do not present generated text as an unassisted or original human assessment.
+
+This repository contains instructions, generic fictional examples, and a layout template. It contains no real submissions, private reviewer records, or examples intended to identify authors or reviewers.
+
+## Use
+
+Place this directory in a skill location supported by your tool, then start with a request such as:
+
+> Use $core-paper-review to help me prepare a preliminary assessment of this paper. Confirm the venue and template first, check proposed concerns against the evidence, and leave the final judgments to me.
+
+See [SKILL.md](SKILL.md) for the full instructions.
+
+## Files
+
+- [Completeness screening](references/quality-screening.md)
+- [Calibration and fictional examples](references/calibration.md)
+- [Outputs and source verification](references/output-contract.md)
+- [English LaTeX layout](assets/review-english.tex)
