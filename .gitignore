@@ -1,0 +1,13 @@
+# Publish only the skill source and its repository documentation.
+*
+!.gitignore
+!README.md
+!SKILL.md
+!agents/
+!agents/openai.yaml
+!assets/
+!assets/review-english.tex
+!references/
+!references/calibration.md
+!references/output-contract.md
+!references/quality-screening.md
