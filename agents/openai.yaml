@@ -1,4 +1,4 @@
 interface:
   display_name: "核心问题审稿"
-  short_description: "协助论文初步审稿，检查完成度、核对核心问题，输出供人工复核的中英文、LaTeX和证据文件"
-  default_prompt: "请使用 $core-paper-review 完成这篇论文的初步评估和证据核对，先确认会议模板，将最终判断留给我复核，并按需整理中英文和 LaTeX 初稿。"
+  short_description: "先定性检查正文填满与完成度，全面审查后核实至少三条核心问题，输出中英文和证据供人工复核"
+  default_prompt: "请使用 $core-paper-review，确认会议模板，先检查正文填满与整体完成度，再全面审查形成候选池并筛选至少三条核心问题，输出中英文、LaTeX和证据供我复核。"
